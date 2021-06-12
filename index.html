@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sjcl/1.0.8/sjcl.min.js" integrity="sha512-s0r9TyYSs5CusSDL5s/QEZQZ4DNYLDXx0S+imS+SHR9mw0Yd0Z5KNS9dw7levSp7GpjOZu/bndds3FEDrKd8dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1 id="a"></h1>
+    <script>
+        
+        fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
+            .then(response => response.json())
+            .then(kson => {
+                fetch("https://api.coindesk.com/v1/bpi/historical/close.json")
+                    .then(response => response.json())
+                    .then(json => {
+                        keys = Object.keys(json.bpi)
+                        key = keys[keys.length-1]
+                        close = json.bpi[key]
+                        current = kson.bpi.USD.rate_float
+                        const myBitArray = sjcl.hash.sha256.hash(current)
+                        const myHash = sjcl.codec.hex.fromBits(myBitArray)
+                        h1 = document.getElementById('a')
+                        rand = parseInt(Math.random() * myHash.length)
+                        text = myHash.substr(0,rand)+"<span style=\"color: red\">"+myHash[rand]+"</span>"+myHash.substr(rand+1)
+                        h1.innerHTML = text
+                        if(close>current){
+                            h1.style.color = "#ba2e22"
+                        } else {
+                            h1.style.color = "#32a852"
+                        }
+                    })
+                })
+    </script>
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+            background-color: black;
+        }
+        h1{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script src="./script.js"></script>
+
+</body>
+</html>
