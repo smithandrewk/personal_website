@@ -1,62 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Sidney Ramsey</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sjcl/1.0.8/sjcl.min.js" integrity="sha512-s0r9TyYSs5CusSDL5s/QEZQZ4DNYLDXx0S+imS+SHR9mw0Yd0Z5KNS9dw7levSp7GpjOZu/bndds3FEDrKd8dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-
 <body>
-    <header>
-        <div class="logo-container">
-            <h4 class="logo">Sidney Ramsey</h4>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li></li>
-            </ul>
-        </nav>
-        <div class="cart">
-            <a href="https://www.instagram.com/sidneyramsey/" target="_blank"><img src="./insta.png" alt="cart" width="30px" /></a>
-        </div>
-    </header>
+    <h1 id="a"></h1>
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+            background-color: black;
+        }
+        h1{
+            height: 100%;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            font-size: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script src="./script.js"></script>
 
-    <main>
-        <section class="presentation">
-            <div class="introduction">
-                <div class="intro-text">
-                    <h1 id="name">Sidney Ramsey</h1>
-                    <p>
-                        In 2017, Sidney Ramsey left home in Columbia, SC, to attend the University of Southern California, where she pursued a double major in Dance (BFA) and Health and the Human Sciences (BA). Her passion for dance stems from the union of the mind and body,
-                        and she hopes to continue exploring the possibilities of intertwining dance and scientific research as she begins her professional career.
-                        <button id="cta-more" onclick="document.getElementById('more').style.display='unset'; document.getElementById('cta-more').style.display = 'none';">Read More</button>
-                    </p>
-                    <p id="more" style="display: none;">
-                        During her time at USC Kaufman, Sidney has performed repertory by choreographers like William Forsythe, Jiří Kylián, Barak Marshall, Matthew Neenan, Paul Taylor, and more. She has also developed her own choreographic approach, inspired by the steps of
-                        the scientific method, through implementing structures and scores informed by psychological concepts and theories that she has found interesting in her studies. With her major in Health and the Human Sciences, Sidney has gained
-                        experience in internships exploring the correlations between dance, quality of life or holistic health, and one’s social environment. Immediately upon graduating, Sidney wants to perform and tour with a contemporary company. She
-                        also has long-term goals to use her degrees to explore how rigorous dance training impacts one’s health and aging process. Through conducting and advocating for further research into professional dancers’ health, Sidney will seek
-                        solutions to how dancers can sustain longer careers and increase their longevity. <button id="cta-more" onclick="document.getElementById('more').style.display='none'; document.getElementById('cta-more').style.display = 'unset';">Read Less</button>
-                    </p>
-
-                </div>
-                <div class="cta">
-                    <a class="nav-link" href="Sidney-Ramsey-Resume.pdf" target="_blank"> <button class="cta-resume">Resume</button>
-                    </a>
-                    <a class="nav-link" href="mailto:sidneygramsey1@gmail.com" target="_blank"> <button class="cta-email">Email</button>
-                    </a>
-                </div>
-            </div>
-            <div class="cover">
-                <img src="./sid_cut (1).jpg" alt="matebook" />
-            </div>
-        </section>
-
-    </main>
 </body>
-
 </html>
