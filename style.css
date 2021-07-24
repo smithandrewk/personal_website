@@ -46,10 +46,8 @@
         align-items: center;
     }
     
-    .about-pages div>p {
-        width: 80%;
-        font-size: 30px;
-        line-height: 30px;
+    #brief>p {
+        margin: 0 2rem;
     }
     
     .about-pages div:nth-child(1) {
@@ -82,6 +80,7 @@
     
     #address h1 {
         padding: 3rem 0;
+        text-align: center;
     }
     
     #section2 {
@@ -148,10 +147,6 @@
     }
     
     @media only screen and (max-width: 600px) {
-        .about-pages div>p {
-            font-size: 15px;
-            line-height: 30px;
-        }
         header {
             height: 100vh;
             display: flex;
@@ -169,7 +164,23 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 19px;
+            font-size: 12px;
             margin: 0!important;
+        }
+        #section2 img {
+            width: 50vw;
+        }
+        #links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #resume {
+            margin-top: .5rem;
+            font-size: small;
+        }
+        #insta {
+            margin-top: .5rem;
         }
     }
